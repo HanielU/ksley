@@ -1,67 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <title>OnClock/Tasks</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>OnClock/Tasks</title>
+  </head>
 
-<body class="bg-purple-100 overflow-scroll relative h-full">
-  <main class="place-content-center grid w-full">
-    <div class="w-full grid place-items-center">
-      <h1 class="text-black text-3xl font-bold w-auto mt-10 mb-10">Your Tasks</h1>
-    </div>
-    <a href=""></a>
+  <body class="bg-purple-100 overflow-scroll relative h-full">
+    <main class="place-content-center grid w-full">
+      <div class="w-full grid place-items-center">
+        <h1 class="text-black text-3xl font-bold w-auto mt-10 mb-10">Your Tasks</h1>
+      </div>
+      <a href=""></a>
+      <!-- <div class="place-content-center grid w-full mb-5 h-20"> -->
+      <div
+        class="relative flex bg-purple-200 w-80 h-20 mb-6 rounded-xl border-b-4 border-ppurple justify-items-center"
+      >
+        <h2 class="mt-1 ml-5 text-xl font-semibold">Today</h2>
+        <br />
+        <small class="-ml-12 mt-8 font-semibold text-gray-700" id="date">Date...</small>
 
-    <div class="relative flex bg-purple-200 w-80 h-20 mb-6 rounded-xl border-b-4 border-ppurple justify-items-center">
-      <h2 class="mt-1 ml-5 text-xl font-semibold">Today</h2>
-      <br />
-      <small class="-ml-12 mt-8 font-semibold text-gray-700" id="date">Date...</small>
-
-      <button id="open-modal"
-        class="absolute bg-black hover:bg-ppurple text-white font-semibold rounded-2xl px-5 py-2 ml-48 mt-5">
-        Add Task
-      </button>
-    </div>
-
-    <dialog id="modal" class="bg-purple-300 w-80 rounded-2xl justify-evenly mt-28">
-      <div class="flex">
-        <input type="text" id="task" class=" pl-2 focus:border-2   rounded-2xl mt-2" />
-        <button id="add"
-          class="ml-4 mt-2 hover:bg-ppurple bg-black text-white font-semibold rounded-3xl px-4 py-2 w-14">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-          </svg>
+        <button
+          id="open-modal"
+          class="absolute bg-black hover:bg-ppurple text-white font-semibold rounded-2xl px-5 py-2 ml-48 mt-5"
+        >
+          Add Task
         </button>
       </div>
-    </dialog>
 
-    <div id="task-list" class=" place-content-center w-full grid grid-flow-row grid-rows-1 gap-4 mb-30">
-      <!-- <div id="task-item" class="bg-purple-200 w-80 h-16 rounded-xl border-b-4 border-ppurple flex justify-between">
-        <h2 class="mt-4 ml-4 text-xl font-semibold">Assignment 1</h2>
-        <button id="done"
-          class="w-7 h-7 mt-4 mr-6 rounded-2xl p-1 text-white bg-black hover:bg-ppurple grid place-content-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-          </svg>
-        </button>
-        <button class="w-7 h-7 mt-4  rounded-2xl p-1 text-white bg-black hover:bg-ppurple grid place-content-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
-            <path fill="currentColor"
-              d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10s10-4.47 10-10S17.53 2 12 2zm4.3 14.3a.996.996 0 0 1-1.41 0L12 13.41L9.11 16.3a.996.996 0 1 1-1.41-1.41L10.59 12L7.7 9.11A.996.996 0 1 1 9.11 7.7L12 10.59l2.89-2.89a.996.996 0 1 1 1.41 1.41L13.41 12l2.89 2.89c.38.38.38 1.02 0 1.41z" />
-          </svg>
-        </button>
-      </div> -->
-    </div>
-  </main>
+      <dialog id="modal" class="bg-purple-300 w-80 rounded-2xl justify-evenly mt-28">
+        <div class="flex">
+          <input
+            type="text"
+            id="task"
+            class="pl-2 focus:border-2 border-ppurple rounded-2xl mt-2"
+          />
+          <button
+            id="add"
+            class="ml-4 mt-2 hover:bg-ppurple bg-black text-white font-semibold rounded-3xl px-4 py-2 w-14"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+          </button>
+        </div>
+      </dialog>
 
-  <footer
-    class="py-4 px-4 fixed bottom-0 inset-x-0 bg-white rounded-t-3xl text-center flex justify-between items-center text-sm text-ppurple uppercase font-mono navBar overflow-x-hidden">
-    <!-- <a href="explore.html" cclass="btn mx-auto active:bg-ppurple py-5 active:px-5 rounded-3xl active:text-white">
+      <div id="task-list" class="place-content-center w-full grid grid-flow-row grid-rows-1 gap-4">
+        <div
+          class="bg-purple-200 w-80 h-16 rounded-xl border-b-4 border-ppurple flex justify-between"
+        >
+          <h2 class="mt-4 ml-4 text-xl font-semibold">Assignment 1</h2>
+          <button
+            id="done"
+            class="w-7 h-7 mt-4 mr-6 rounded-2xl p-1 text-white bg-black hover:bg-ppurple grid place-content-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="py-4 px-4 fixed bottom-0 inset-x-0 bg-white rounded-t-3xl text-center flex justify-between items-center text-sm text-ppurple uppercase font-mono navBar overflow-x-hidden"
+    >
+      <!-- <a href="explore.html" cclass="btn mx-auto active:bg-ppurple py-5 active:px-5 rounded-3xl active:text-white">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mx-auto">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
         </svg>Explore</a>
@@ -86,12 +110,12 @@
             </svg>STATS</button>
 </a> -->
 
-    <!-- Navigation is in JS -->
-  </footer>
-  <script type="module" src="./main.js"></script>
-  <script type="module" src="./js/nav.js"></script>
-  <script type="module" src="./js/tasks.js"></script>
-  <!-- <script>
+      <!-- Navigation is in JS -->
+    </footer>
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./js/nav.js"></script>
+    <script type="module" src="./js/tasks.js"></script>
+    <!-- <script>
         var btnWrap = document.getElementById('navBar');
         var btns = btnWrap.getElementsByTagName('a');
 
@@ -105,6 +129,5 @@
             
         }
     </script> -->
-</body>
-
+  </body>
 </html>

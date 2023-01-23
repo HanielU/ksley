@@ -59,7 +59,7 @@ function load() {
     daySquare.classList.add("day");
     daySquare.setAttribute(
       "style",
-      "width: 3.125rem; padding: 5px; height: 3.125rem; cursor: pointer; box-sizing: border-box; background-color: white; margin: 2px; box-shadow: 0px 0px 3px #CBD4C2; display: grid; place-items-center; justify-content: space-between; border: .5px solid rgb(169, 3, 252); "
+      "width: 50px; padding: 10px; height: 50px; cursor: pointer; box-sizing: border-box; background-color: white;margin: 2px; box-shadow: 0px 0px 3px #CBD4C2; display: flex; flex-direction: column; justify-content: space-between;"
     );
     daySquare.setAttribute("style:hover", "background-color: purple");
 
@@ -86,8 +86,6 @@ function load() {
     }
 
     calendar.appendChild(daySquare);
-    daySquare.style.backgroundColor="ppurple";
-    daySquare.style.overflow='clip';
   }
 }
 
